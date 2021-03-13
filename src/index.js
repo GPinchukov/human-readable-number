@@ -1,10 +1,10 @@
-const dg = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
-const tw = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+const ed = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+const zer = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
 function toWord(num) {
-    let result = num < 20 ? dg[num] :
-        num < 100 ? `${tw[Math.floor(num / 10)]} ${dg[num % 10]}` :
-            num < 1000 ? `${dg[Math.floor(num / 100)]} hundred ${toWord(num % 100)}`  : 'to much';
+    let result = num < 20 ? ed[num] :
+        num < 100 ? `${zer[Math.floor(num / 10)]} ${ed[num % 10]}` :
+            num < 1000 ? `${ed[Math.floor(num / 100)]} hundred ${toWord(num % 100)}`  : 'to much';
     return result.trim();
 }
 
